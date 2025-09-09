@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="hi, i'm tomas vallini, let's connect!">
+    <meta name="keywords" content="tomas vallini, software developer, developer, freelance, php, javascript, argentina">
+    <meta name="author" content="tomas vallini">
+    <meta name="robots" content="index, follow">
+    <title>Tomas Vallini</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="48x48">
+    <link rel="canonical" href="https://tomasvallini.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    <style>
+        :root {
+            --text-color: #171717;
+            --background-color: #f0f0f0;
+            --link-color: #6b7280;
+            --link-hover-color: #000;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 36em;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+        .avatar-container {
+            position: relative;
+            display: inline-block;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--text-color);
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .flag {
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 32px;
+            line-height: 1;
+        }
+        h1 {
+            font-family: 'Lora', serif;
+            color: var(--text-color);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        /* .flag-container {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            margin-bottom: 1rem;
+        }
+        .argentina-flag {
+            width: 40px;
+            height: 24px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            margin-right: 0.5rem;
+        }
+        .flag-blue {
+            background-color: #74acdf;
+            height: 33.33%;
+        }
+        .flag-white {
+            background-color: white;
+            height: 33.33%;
+            position: relative;
+        }
+        .flag-white::before {
+            content: '☀';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f1c40f;
+            font-size: 12px;
+        } */
+        p {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.2rem;
+            font-size: .9rem;
+        }
+        .social-links a {
+            color: var(--link-color);
+            transition: color 0.3s;
+            display: inline-flex;
+            -webkit-text-decoration: inherit;
+            text-decoration: inherit;
+        }
+        .social-links a:hover {
+            color: var(--link-hover-color);
+        }
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Typewriter effect */
+        @keyframes typing {
+        0.0000%, 15.0000% { content: ""; }
+        0.6250%, 14.3750% { content: "d"; }
+        1.2500%, 13.7500% { content: "de"; }
+        1.8750%, 13.1250% { content: "dev"; }
+        2.5000%, 12.5000% { content: "deve"; }
+        3.1250%, 11.8750% { content: "devel"; }
+        3.7500%, 11.2500% { content: "develo"; }
+        4.3750%, 10.6250% { content: "develop"; }
+        5.0000%, 10.0000% { content: "develope"; }
+        5.6250%, 9.3750% { content: "developer"; }
+
+        20.0000%, 35.0000% { content: ""; }
+        20.6250%, 34.3750% { content: "t"; }
+        21.2500%, 33.7500% { content: "tr"; }
+        21.8750%, 33.1250% { content: "tra"; }
+        22.5000%, 32.5000% { content: "trav"; }
+        23.1250%, 31.8750% { content: "trave"; }
+        23.7500%, 31.2500% { content: "travel"; }
+        24.3750%, 30.6250% { content: "travele"; }
+        25.0000%, 30.0000% { content: "traveler"; }
+
+        40.0000%, 55.0000% { content: ""; }
+        40.6250%, 54.3750% { content: "s"; }
+        41.2500%, 53.7500% { content: "sp"; }
+        41.8750%, 53.1250% { content: "spo"; }
+        42.5000%, 52.5000% { content: "spor"; }
+        43.1250%, 51.8750% { content: "sport"; }
+        43.7500%, 51.2500% { content: "sports"; }
+        44.3750%, 50.6250% { content: "sports f"; }
+        45.0000%, 50.0000% { content: "sports fa"; }
+        45.6250%, 49.3750% { content: "sports fan"; }
+
+        60.0000%, 75.0000% { content: ""; }
+        60.6250%, 74.3750% { content: "p"; }
+        61.2500%, 73.7500% { content: "pr"; }
+        61.8750%, 73.1250% { content: "pro"; }
+        62.5000%, 72.5000% { content: "prob"; }
+        63.1250%, 71.8750% { content: "probl"; }
+        63.7500%, 71.2500% { content: "proble"; }
+        64.3750%, 70.6250% { content: "problem"; }
+        65.0000%, 70.0000% { content: "problem s"; }
+        65.6250%, 69.3750% { content: "problem so"; }
+        66.2500%, 68.7500% { content: "problem sol"; }
+        66.8750%, 68.1250% { content: "problem solv"; }
+        67.5000%, 67.8750% { content: "problem solve"; }
+        68.1250%, 67.2500% { content: "problem solver"; }
+
+        80.0000%, 95.0000% { content: ""; }
+        80.6250%, 94.3750% { content: "c"; }
+        81.2500%, 93.7500% { content: "cu"; }
+        81.8750%, 93.1250% { content: "cur"; }
+        82.5000%, 92.5000% { content: "curi"; }
+        83.1250%, 91.8750% { content: "curio"; }
+        83.7500%, 91.2500% { content: "curious"; }
+        }
+
+        @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+        }
+
+        .typewriter {
+        --caret: currentcolor;
+        }
+
+        .typewriter::before {
+        content: "";
+        animation: typing 16s infinite;
+        }
+
+        .typewriter::after {
+        content: "";
+        border-right: 1px solid var(--caret);
+        animation: blink 0.5s linear infinite;
+        }
+
+        .typewriter.thick::after {
+        border-right: 1ch solid var(--caret);
+        }
+
+        .typewriter.nocaret::after {
+        border-right: 0;
+        }
+
+        @media (prefers-reduced-motion) {
+        .typewriter::after {
+            animation: none;
+        }
+        
+        @keyframes sequencePopup {
+            0%, 20% { content: "developer"; }
+            25%, 40% { content: "traveler"; }
+            45%, 60% { content: "sports fan"; }
+            65%, 80% { content: "problem solver"; }
+            85%, 100% { content: "curious"; }
+        }
+
+        .typewriter::before {
+            content: "developer";
+            animation: sequencePopup 16s linear infinite;
+        }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar-container">
+            <div class="avatar">
+                <img src="avatar.png" alt="avatar">
+            </div>
+            <span class="flag" title="Born in Argentina">🇦🇷</span>
+            <!-- <div class="flag-container">
+                <div class="argentina-flag" title="Born in Argentina">
+                    <div class="flag-blue"></div>
+                    <div class="flag-white"></div>
+                    <div class="flag-blue"></div>
+                </div>
+            </div> -->
+        </div>
+        <h1>Tomas Vallini</h1>
+        <p class="typewriter"></p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/tomasvallini" target="_blank" rel="noopener noreferrer">
+                connect
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+            <a href="https://x.com/tvallini" target="_blank" rel="noopener noreferrer">
+                follow
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+            <a href="https://github.com/tvallini" target="_blank" rel="noopener noreferrer">
+                code
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
