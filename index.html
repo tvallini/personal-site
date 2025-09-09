@@ -59,44 +59,15 @@
             font-size: 32px;
             line-height: 1;
         }
+        .flag svg {
+            border-radius: 2px;
+        }
         h1 {
             font-family: 'Lora', serif;
             color: var(--text-color);
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
-        /* .flag-container {
-            display: flex;
-            align-items: start;
-            justify-content: start;
-            margin-bottom: 1rem;
-        }
-        .argentina-flag {
-            width: 40px;
-            height: 24px;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #ccc;
-            margin-right: 0.5rem;
-        }
-        .flag-blue {
-            background-color: #74acdf;
-            height: 33.33%;
-        }
-        .flag-white {
-            background-color: white;
-            height: 33.33%;
-            position: relative;
-        }
-        .flag-white::before {
-            content: '☀';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #f1c40f;
-            font-size: 12px;
-        } */
         p {
             color: var(--text-color);
             line-height: 1.6;
@@ -245,14 +216,40 @@
             <div class="avatar">
                 <img src="avatar.png" alt="avatar">
             </div>
-            <span class="flag" title="Born in Argentina">🇦🇷</span>
-            <!-- <div class="flag-container">
-                <div class="argentina-flag" title="Born in Argentina">
-                    <div class="flag-blue"></div>
-                    <div class="flag-white"></div>
-                    <div class="flag-blue"></div>
-                </div>
-            </div> -->
+            <span class="flag" title="Born in Argentina">
+                <svg width="40" height="24" viewBox="0 0 40 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="40" height="8" fill="#74ACDF"/>
+                <rect x="0" y="16" width="40" height="8" fill="#74ACDF"/>
+                <rect x="0" y="8" width="40" height="8" fill="#FFFFFF"/>
+                <g transform="translate(20, 12) scale(0.4)">
+                    <circle cx="0" cy="0" r="4" fill="#F6CB44"/>
+                    <g fill="#F6CB44">
+                    <rect x="-0.33" y="-5.33" width="0.67" height="1.33"/>
+                    <rect x="-0.33" y="4" width="0.67" height="1.33"/>
+                    <rect x="-5.33" y="-0.33" width="1.33" height="0.67"/>
+                    <rect x="4" y="-0.33" width="1.33" height="0.67"/>
+                    <g transform="rotate(45)">
+                        <rect x="-0.33" y="-5.33" width="0.67" height="1.33"/>
+                        <rect x="-0.33" y="4" width="0.67" height="1.33"/>
+                        <rect x="-5.33" y="-0.33" width="1.33" height="0.67"/>
+                        <rect x="4" y="-0.33" width="1.33" height="0.67"/>
+                    </g>
+                    <g transform="rotate(22.5)">
+                        <rect x="-0.33" y="-5.33" width="0.67" height="1.33"/>
+                        <rect x="-0.33" y="4" width="0.67" height="1.33"/>
+                        <rect x="-5.33" y="-0.33" width="1.33" height="0.67"/>
+                        <rect x="4" y="-0.33" width="1.33" height="0.67"/>
+                    </g>
+                    <g transform="rotate(-22.5)">
+                        <rect x="-0.33" y="-5.33" width="0.67" height="1.33"/>
+                        <rect x="-0.33" y="4" width="0.67" height="1.33"/>
+                        <rect x="-5.33" y="-0.33" width="1.33" height="0.67"/>
+                        <rect x="4" y="-0.33" width="1.33" height="0.67"/>
+                    </g>
+                    </g>
+                </g>
+                </svg>
+            </span>
         </div>
         <h1>Tomas Vallini</h1>
         <p class="typewriter"></p>
